@@ -1,9 +1,9 @@
-## What is React and its purpose?   
-## Why didn't we have to use Redux to make that app?   
-## What was that 'class' thing?   
-## What was the HTML(JSX) looking stuff?   
-## How did the screen change when we moved the mouse?   
-## Why did we add TWO libraries (React and ReactDOM)?   
+#### What is React and its purpose?   
+#### Why didn't we have to use Redux to make that app?   
+#### What was that 'class' thing?   
+#### What was the HTML(JSX) looking stuff?   
+#### How did the screen change when we moved the mouse?   
+#### Why did we add TWO libraries (React and ReactDOM)?   
 
 
 [#1 example](https://codepen.io/sgrider/pen/MxPKJE)
