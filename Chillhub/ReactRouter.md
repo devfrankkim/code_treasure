@@ -10,7 +10,7 @@ How to install Router
 ```js
 
 import React from 'react'
-import {HasRouter as Router} from "react-router-dom"
+import {HashRouter as Router} from "react-router-dom"
 
 <Router>
     <>
