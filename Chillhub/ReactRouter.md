@@ -15,8 +15,8 @@ import {HashRouter as Router} from "react-router-dom"
 <Router>
     <>
     <Route paht="/" exact component={}/>
-    <Route paht="/tv" exact component={tv}/>
-    <Route paht="/search" exact component={search}/>
+    <Route paht="/tv" exact component={TV}/>
+    <Route paht="/search" exact component={Search}/>
     </>
 </Router>
 ```
