@@ -1,4 +1,4 @@
-# Destructuring (let - const) #example
+# Destructuring (let - const) reassign #example
 
 [Reference Destructuring => Assignment without declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Assignment_without_declaration_)
 
