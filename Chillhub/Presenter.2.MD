@@ -1,8 +1,12 @@
 # onSubmit - onChange (Form, Input, Search, Update, Render)
 
-## onSubmit(handleSubmit, use {sendData} from Input to search) - Form
+### #Form# \*\* onSubmit(event.preventDefault(), use {sentData} from #Input# to Search)
 
-## onChange(Update the event.target.value), value={sendData} - Input
+### #Input# \*\* value={sendData}, onChange(Update.Event.target.value)-> \*(setState) show on the screen(updated event.target.value)
+
+Input에서 글자 1) event.target.value 넘어가게 바꿔준다. 2)value를 사용하여 값을 Form에게 넘긴다.
+
+Form은 해당 페이지 1) refresh를 멈추고, 2) Input에서 받은 value 값을 사용하여 데이터를 찾는다.
 
 ```js
 1. onSubmit - <Form onSubmit={preventRefresh} />,
