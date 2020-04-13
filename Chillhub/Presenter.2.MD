@@ -1,9 +1,16 @@
-# onSubmit(handleSubmit, data) - Form, onChange(update event.target.value) - Input
+# onSubmit - onChange (Form, Input, Search, Update, Render)
+
+## onSubmit(handleSubmit, use {sendData} from Input to search) - Form
+
+## onChange(Update the event.target.value), value={sendData} - Input
 
 ```js
-1. onSubmit - <Form onSubmit={preventRefresh} />, Browser(page refresh) => event.preventDefault(), and call the fucntion that looks for data
+1. onSubmit - <Form onSubmit={preventRefresh} />,
+    A. Browser(page refresh) => event.preventDefault(),
+    B. and then call the fucntion that looks for {sentdata} from Input-{Updated.event.target.value}
 
-2. onChange - <Input onChange={updateValue} />, value => event.target.value(update)
+2. onChange - <Input onChange={Update.Event.target.value} />,
+    value => event.target.value(update)
 ```
 
 [SearchPresenter.js]
