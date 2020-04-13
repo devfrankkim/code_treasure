@@ -1,4 +1,4 @@
-# what is Children in React? How to use children?
+# What is Children in React? How to use children?
 
 Reserved React props.
 `Children => It is used to display whatever you include between the opening and closing tags when invoking a component.`
@@ -42,7 +42,7 @@ const HomePresenter = ({ nowPlaying, popular, loading }) => {
 };
 ```
 
-[Seciton.js]
+[Section.js]
 
 ```js
 import React from "react";
