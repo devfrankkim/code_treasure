@@ -1,4 +1,4 @@
-# Class
+# Class & Static
 
 [Blog refrence](https://blog.logrocket.com/javascript-es6-5-new-abstractions-to-improve-your-code-54a369e82407/)
 
