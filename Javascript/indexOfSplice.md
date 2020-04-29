@@ -91,3 +91,45 @@ while (idx != -1) {
 console.log(indices);
 // [4, 2, 0]
 ```
+
+```js
+var animals = ["dog", "cat", "seal", "walrus", "lion", "cat"];
+// 배열에서 원소를 제거
+var deleteElement = animals.splice(animals.indexOf("walrus"), 1);
+console.log(deleteElement); // 반환값은 제거한 원소
+console.log(animals); // 원래 배열은 제거한 원소를 제외한 원소를 반환
+// 새로운 원소를 삽압하기
+animals.splice(animals.lastIndexOf("cat"), 1, "monkey", "puma");
+console.log(animals);
+
+var animals2 = ["cat", "walrus", "lion", "cat"];
+// 새로운 원소 삽입
+animals2.splice(-2, 1, "monkey"); // 끝에서 부터 2번째 인덱스, 1개의 원소를 제거하고 'monkey' 을 삽입
+console.log(animals2);
+
+// 잘라내는 원소의 개수가 주어지지 않는다면 시작 위치부터 배열 끝까지 모든 원소가 제거된다.
+var animals3 = ["cat", "walrus", "lion", "cat"];
+animals3.splice(2); // 2 인덱스부터 배열 끝가지 모든 원소를 제거
+console.log(animals3);
+
+var animals4 = ["cat", "dog", "lion", "cat"];
+// 두 번째 원소를 다른 두 개의 값으로 치환
+animals4.splice(3, 1, "zebra", "elephant"); // 3 번째 인덱스인 cat, 원소 1개를 제거하고 두 개의 원소를 삽입한다.
+console.log(animals4);
+
+// 반복문과 splice 를 사용한 원소 제거와 치환
+var charSets = ["ab", "bb", "cd", "ab", "cc", "ab", "dd", "ab"];
+
+// 원소 치환하기
+while (charSets.indexOf("ab") != -1) {
+  charSets.splice(charSets.indexOf("ab"), 1, "**");
+}
+console.log(charSets);
+
+// 원소 제거하기
+while (charSets.indexOf("**") != -1) {
+  charSets.splice(charSets.indexOf("**"), 1);
+}
+
+console.log(charSets);
+```
