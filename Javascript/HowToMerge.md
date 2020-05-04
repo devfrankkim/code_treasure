@@ -9,11 +9,11 @@ const fruit2 = ["melon", "watermelon"];
    : concat returns a new array for us
 
 ```js
-const combinedArray = fruit1.concat(fruit2);
+const combinedArray = fruit1.concat(fruit2);>>>
 ```
 
 2. spread syntax
 
-   ```js
-   const combinedArray = fruit1.concat(fruit2);
-   ```
+```js
+const combinedArray2 = [...fruit1, ...fruit2]
+```
