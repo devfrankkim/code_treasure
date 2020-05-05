@@ -1,7 +1,7 @@
 # What is flexbox? I don't talk to the children any more.
 
-[flexbox reference](http://flexboxfroggy.com/#ko)
-[fix the height for html,body](https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm)
+1. [flexbox reference](http://flexboxfroggy.com/#ko)
+2. [fix the height for html,body](https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm)
 
 it's like saying
 
