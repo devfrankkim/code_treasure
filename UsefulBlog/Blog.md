@@ -1,5 +1,6 @@
 # Full-stack
 
+[kirupa useful forums and videos](https://www.kirupa.com/)
 [Docs](https://devdocs.io/)
 [Javascript + React + CSS + etc..](https://alligator.io/explore/)
 [Korean blog good examples JS, CSS etc](https://webclub.tistory.com/638)
