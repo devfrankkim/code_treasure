@@ -1,4 +1,4 @@
-# what is display:flex ? I don't talk to the children any more.
+# What is flexbox? I don't talk to the children any more.
 
 [flexbox reference](http://flexboxfroggy.com/#ko)
 [fix the height for html,body](https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm)
@@ -7,7 +7,7 @@ it's like saying
 
 Hey, fahter!!!! your children will go there.
 
-Before Flex,
+Before Flex,  
 Hey children you go there.
 
 ### You only need to talk to the father for flex
