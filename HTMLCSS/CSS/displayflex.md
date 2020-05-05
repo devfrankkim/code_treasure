@@ -1,6 +1,6 @@
 # What is flexbox? I don't talk to the children any more.
 
-1. [flexbox reference](http://flexboxfroggy.com/#ko)
+1. [flexbox GAME](http://flexboxfroggy.com/#ko)
 2. [fix the height for html,body](https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm)
 
 it's like saying
