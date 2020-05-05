@@ -3,8 +3,8 @@
 How do I know which header is which without names?
 ex) How do people recongnize twins?
 
-id is very unique. it's like passport number. (no-share)
-class is like country, the same class rooms. (share)
+'id' is very unique. it's like passport number. (no-share)
+'class' is like country, the same class rooms. (share)
 
 ```
 <body>
