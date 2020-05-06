@@ -9,7 +9,8 @@ length => substr() VS substraction => substring()
 ```
 string.substr(start, length)
 
-start: The position where to start the extraction, index starting from 0.           length: The number of characters to extract (optional).
+start: The position where to start the extraction, index starting from 0.
+length: The number of characters to extract (optional).
 
 ```
 
