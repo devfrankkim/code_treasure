@@ -17,7 +17,7 @@ Hey children you go there.
 ### if flex, it's not blocks any more
 
 justify-content
-align-content - Aligns the container of the flex box.
+align-content - Aligns the container of the flex box. (with space organized!!!!)
 align-item - Aligns the item inside the container.
 
 - flex-start: Items align to the left side of the container.
