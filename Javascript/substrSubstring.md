@@ -7,11 +7,10 @@ length => substr() VS substraction => substring()
 - Moreover, substr() accepts a negative starting position as an offset from the end of the string. substring() does not.
 
 ```
-substr()
-
-start: The position where to start the extraction, index starting from 0.       length: The number of characters to extract (optional).
-
 string.substr(start, length)
+
+start: The position where to start the extraction, index starting from 0.           length: The number of characters to extract (optional).
+
 ```
 
 ```js
