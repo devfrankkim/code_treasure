@@ -16,6 +16,51 @@ Hey children you go there.
 
 ### if flex, it's not blocks any more
 
+justify-content
+align-content - Aligns the container of the flex box.
+align-item - Aligns the item inside the container.
+
+- flex-start: Items align to the left side of the container.
+- flex-end: Items align to the right side of the container.
+- center: Items align at the center of the container.
+- space-between: Items display with equal spacing between them.
+  first & last itemes will be at the ends of the browser and then the rest of the items will space out evenly between them.
+- space-around: Items display with equal spacing around them.(everything space equally)
+
+### align-items
+
+- flex-start: Items align to the top of the container.
+- flex-end: Items align to the bottom of the container.
+- center: Items align at the vertical center of the container.
+- baseline: Items display at the baseline of the container.
+- stretch: Items are stretched to fit the container.
+
+### flex-direction
+
+- row: Items are placed the same as the text direction.
+- row-reverse: Items are placed opposite to the text direction.
+- column: Items are placed top to bottom.
+- column-reverse: Items are placed bottom to top.
+
+### align-self
+
+### flex-wrap
+
+- nowrap: Every item is fit to a single line.
+- wrap: Items wrap around to additional lines.
+- wrap-reverse: Items wrap around to additional lines in reverse.
+
+### flex-flow
+
+- flex-flow:column wrap
+
+- flex-direction: column;
+- flex-wrap:wrap
+
+### align-content
+
+- align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+
 ```
 *justify-content*
 space-between,
