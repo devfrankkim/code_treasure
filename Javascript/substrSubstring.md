@@ -1,6 +1,6 @@
 # substr() VS substring()
 
-length (substr())vs substraction (substring())
+length => substr() VS substraction => substring()
 
 - The difference is in the second argument. The second argument to substring is the index to stop at (but not include), but the second argument to substr is the maximum length to return.
 
