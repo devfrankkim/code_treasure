@@ -2,6 +2,9 @@
 
 [The best reference for undefined vs null](https://josephkhan.me/javascript-undefined-vs-null/)
 
+- computer give the value => undefined
+- people give the value => null
+
 ```js
 undefined + 1; // NaN
 null + 1; // 1
