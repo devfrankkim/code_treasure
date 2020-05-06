@@ -9,7 +9,7 @@ length => substr() VS substraction => substring()
 ```
 substr()
 
-start: The position where to start the extraction, index starting from 0. length: The number of characters to extract (optional).
+start: The position where to start the extraction, index starting from 0.       length: The number of characters to extract (optional).
 
 string.substr(start, length)
 ```
@@ -25,5 +25,6 @@ var st = s.substring(4, 7); // "Scr"
 ```
 string.substring(start, end)
 
-start: The position where to start the extraction, index starting from 0. end: The position (up to, but not including) where to end the extraction (optional).
+start: The position where to start the extraction, index starting from 0.
+end: The position (up to, but not including) where to end the extraction (optional).
 ```
