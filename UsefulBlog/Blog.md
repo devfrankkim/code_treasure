@@ -1,3 +1,7 @@
+# Interview & gold
+
+[net-informations](http://net-informations.com/js/iq/void.htm)
+
 # Full-stack
 
 [kirupa useful forums and videos](https://www.kirupa.com/)
