@@ -1,4 +1,4 @@
-# what is Transitions?
+# what is Transitions in CSS?
 
 [reference for transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
 
