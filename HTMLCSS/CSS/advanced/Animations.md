@@ -1,8 +1,8 @@
-# what is Animations?
+# what is Animations in CSS?
 
 ### @Keyframes tells the CSS you are creating an Animation.
 
-### animation: 10.5s "keyframeName" infinite ease-in-out;
+### animation: 10.5s "keyframeName" infinite ease-in-out
 
 1. define the name of the animation.
 
