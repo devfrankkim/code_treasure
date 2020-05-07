@@ -1,6 +1,8 @@
 # Interview & gold
 
+[javapoint.com](https://www.javatpoint.com/javascript-oops-constructor-method)
 [net-informations](http://net-informations.com/js/iq/void.htm)
+[h5bp.org](https://h5bp.org/Front-end-Developer-Interview-Questions/about/)
 
 # Full-stack
 
