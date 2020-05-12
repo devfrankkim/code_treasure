@@ -41,3 +41,8 @@ This doesn't happen. Why not? It's just CSS thing. No explanation. it's just CSS
 If margin top or bottom are set to auto, it will just be calculated as zero
 That's why you usually see ig. margin: 0 auto
 ```
+### Summary 
+
+```
+So padding is creating space inside of a content, while margin is creating space outside of the content. You can also change a specific area for both. Such as -left, -right, -top, -bottom, or you can all do it in one property. Lastly, using auto will take the most biggest space as much as possible. You can also use auto to center objects. However, auto will be calculated as 0 when using it for -top and -bottom.
+```
