@@ -11,6 +11,7 @@ color: black;
 
 a {
 color: inherit;
+text-decoration: none;
 }
 
 ```
