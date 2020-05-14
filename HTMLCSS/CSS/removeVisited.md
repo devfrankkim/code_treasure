@@ -1,4 +1,4 @@
-## How to remove visited property?
+## How to remove visited property & a link color
 
 ```
 // Visited link
