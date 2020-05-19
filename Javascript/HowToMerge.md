@@ -15,5 +15,5 @@ const combinedArray = fruit1.concat(fruit2);>>>
 2. spread syntax
 
 ```js
-const combinedArray2 = [...fruit1, ...fruit2]
+const combinedArray2 = [...fruit1, ...fruit2];
 ```
