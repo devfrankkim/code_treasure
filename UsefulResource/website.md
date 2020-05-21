@@ -12,3 +12,4 @@
 # ETC
 
 [Favicon.ico Generator](https://www.favicon-generator.org/)
+[font-awesome snippet content: "\f00c etc..."](https://astronautweb.co/snippet/font-awesome/)
