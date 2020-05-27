@@ -21,6 +21,7 @@
 
 # ETC
 
+[UI gradients](https://uigradients.com/#Hersheys)
 [git game](https://learngitbranching.js.org/)
 [Favicon.ico Generator](https://www.favicon-generator.org/)
 [font-awesome snippet content: "\f00c etc..."](https://astronautweb.co/snippet/font-awesome/)
