@@ -2,6 +2,8 @@
 
 [frontendmentor.io/recources](https://www.frontendmentor.io/resources)
 [MVC to do list](todomvc.com)
+[florakid.com](http://www.florakid.com/florakid_lib/sub/javascript/program_logic.html)
+[https://poiemaweb.com/](https://poiemaweb.com/)
 
 # JavaScript
 
