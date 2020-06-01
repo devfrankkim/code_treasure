@@ -266,12 +266,8 @@ return function () {
 // g에는 값 배열을 넘겨야 하기 때문에 apply를 사용한다.
 
 return f.call(this, g.apply(this, arguments));
-
+  };
 };
-
-};
-
-
 
 var square = function(x) { return x*x };
 
