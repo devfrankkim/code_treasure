@@ -152,3 +152,55 @@ Array.prototpye.reduce가 언어 내부에 built-in 포함된 고차함수다.
 고차함수를 사용하지 않았을 때의 솔루션과 비교해보자.
 
 ### Array.prototype.map
+
+map() 메소드는 입력으로 들어온,
+배열 내 모든 엘리먼트를 인자로 제공받는
+콜백함수를 호출함으로써 새로운 배열을 만들어낸다.
+
+map으로 전해진 콜백함수는 3가지를 인자를 받는다.
+
+1. element
+2. index
+3. array
+
+```js
+[1, 2, 3].map(v => v + 1); // [2, 3, 4]
+```
+
+Example #1
+
+우리가 숫자가 들어있는 배열을 가지고 있고 각각의 숫자 값이 2배가 된 배열을 만들길 원한다고 해보자.
+고차 함수(Higher-Order function)가 없을 때와 있을 때,
+각각 우리가 문제를 어떻게 해결할 수 있는지 확인해보자.
+
+```js
+// 고차 함수가 아닌 함수로 작성
+const arr1 = [1, 2, 3];
+const arr2 = [];
+
+for (let i = 0; i < arr1.length; i++) {
+  arr2.push(arr1[i] * 2);
+}
+console.log(arr2); // [2, 4, 6]
+```
+
+```js
+// 고차 함수
+// 함수를 인자로 전달해서, 함수를 반환한다.
+const arr1 = [1, 2, 3];
+
+const arr2 = arr1.map(function(item) {
+  return item * 2;
+});
+
+console.log(arr2); // [2, 4, 6]
+```
+
+```js
+// Arrow function
+// 화살표 함수 문법을 이용하면 훨씬 짧게 작성 가능하다.
+
+const arr1 = [1, 2, 3];
+const arr2 = arr1.map(item => item * 2);
+console.log(arr2);
+```
