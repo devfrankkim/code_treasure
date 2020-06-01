@@ -169,8 +169,8 @@ map으로 전해진 콜백함수는 3가지를 인자를 받는다.
 
 Example #1
 
-우리가 숫자가 들어있는 배열을 가지고 있고 각각의 숫자 값이 2배가 된 배열을 만들길 원한다고 해보자.
-고차 함수(Higher-Order function)가 없을 때와 있을 때,
+우리가 숫자가 들어있는 배열을 가지고 있고 각각의 숫자 값이 2배가 된 배열을 만들길 원한다고 해보자.  
+고차 함수(Higher-Order function)가 없을 때와 있을 때,  
 각각 우리가 문제를 어떻게 해결할 수 있는지 확인해보자.
 
 ```js
@@ -203,4 +203,41 @@ console.log(arr2); // [2, 4, 6]
 const arr1 = [1, 2, 3];
 const arr2 = arr1.map(item => item * 2);
 console.log(arr2);
+```
+
+Example #2  
+우리가 사람들의 생일을 가지고 있는 배열을 가지고 있고,  
+우리는 그 배열을 이용하여 그들의 나이를 계산하고 싶다.
+
+```js
+// 고차함수가 아닌 함수
+const birthYear = [1975, 1997, 2002, 1995, 1985];
+const ages = [];
+
+for (let i = 0; i < birthYear.length; i++) {
+  let age = 2020 - birthYear[i];
+  ages.push(age);
+}
+
+console.log(ages);
+```
+
+```js
+// 고차함수
+const birthYear = [1975, 1997, 2002, 1995, 1985];
+
+function birthAge(year) {
+  return 2020 - year;
+}
+let ages = birthYear.map(birthAge);
+console.log(ages);
+```
+
+```js
+// 고차함수 arrow function
+const birthYear = [1975, 1997, 2002, 1995, 1985];
+
+let ages = birthYear.map(year => 2020 - year);
+
+console.log(ages);
 ```
