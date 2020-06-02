@@ -6,6 +6,8 @@
 
 You can think of the parameter as a parking space and the argument as a car."
 
+You can think of the parameter as companies and the argument is yourself when applying for jobs.
+
 Argument is the value/variable/reference being passed in, Parameter is the receiving variable used w/in the function/block.
 
 argument is calling the fight
