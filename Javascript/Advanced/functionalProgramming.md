@@ -396,3 +396,57 @@ const sum = arr.reduce(function(
 // prints 35
 console.log(sum);
 ```
+
+```js
+// 고차 함수가 아닌 함수로 작성
+
+const arr = [5, 7, 1, 8, 4];
+
+let sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  sum = sum + arr[i];
+}
+console.log(sum);
+```
+
+### 우리만의 고차함수 만들기
+
+이 지점까지, 우리는 자바스크립트 내부에 작성되어 있는 다양한 고차 함수를 보았다.  
+이제 우리만의 고차함수를 작성해보자.
+
+자바스크립트에 네이티브한 map 메소드가 없었다고 상상해보자.
+우리는 스스로 만들어낼 수 있다. 우리만의 고차 함수를 만들어보자.
+
+우리가 문자열의 배열을 가지고 있다고 하고 우리는 이 배열을 정수의 배열로 바꾸고 싶다.
+여기서 정수는 기존 배열에 존재하던 각각의 문자열의 길이를 표현하고 싶다.
+
+```js
+const strArray = ["Javascript", "Python", "PHP", "Java", "C"];
+
+function mapForEach(arr, fn) {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(fn(arr[i]));
+  }
+  return newArray;
+}
+
+const lenArray = mapForEach(strArray, function(item) {
+  return item.length;
+});
+
+// prints [10, 6, 3, 4, 1]
+console.log(lenArray);
+```
+
+```
+위의 예제에서, 우리는 배열과 콜백함수 fn을 받는 고차 함수 mapForEach를 만들었다.
+이 함수는 제공받은 배열을 반복하고 newArray.push 함수 내부에서 각각의 반복마다 콜백 함수 fn을 호출한다.
+
+콜백 함수 fn은 배열의 현재 요소를 받고 newArray의 내부에 저장된 요소의 길이를 반환한다.
+
+for 루프가 끝난 이후에, newArray가 반환되고, lenArray에 할당된다.
+```
+
+고차 함수는 일반적인 함수인데 함수를 인자로 받고 함수를 반환할 수 있는 추가적인 기능을 가진 것이라고 이해하면된다.
