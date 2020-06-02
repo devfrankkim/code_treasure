@@ -24,6 +24,12 @@
 
 ### 고차 함수(Higher order function)는 함수를 인자로 전달받거나 함수를 결과로 반환하는 함수를 말한다. 다시 말해, 고차 함수는 인자로 받은 함수를 필요한 시점에 호출하거나 클로저를 생성하여 반환한다. 자바스크립트의 함수는 일급 객체이므로 값처럼 인자로 전달할 수 있으며 반환할 수도 있다.
 
+### 함수를 인자로 받아 대신 실행하는 함수
+
+### 함수를 리턴하는 함수
+
+### 함수를 대신 실행하는 함수를 리턴하는 함수
+
 ```js
 // 고차 함수
 function makeCounter(func) {
@@ -276,5 +282,64 @@ var sum = function(x,y) { return x+y; };
 var squareofsum = compose(square, sum);
 
 squareofsum(2,3);        // 25
+```
 
+### 함수를 인자로 받아 대신 실행하는 함수
+
+```js
+// 함수를 인자로 받아 대신 실행하는 함수
+
+function callWith10(val, fn) {
+  return fn(10, val);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function minus(a, b) {
+  return a - b;
+}
+
+callWith10(20, add);
+callWith10(20, minus);
+```
+
+### 함수를 리턴하는 함수
+
+```js
+function constant(val) {
+    return function() {
+        return val;
+    }
+}
+​
+var always10 = constant(10); // 10
+```
+
+### 함수를 대신 실행하는 함수를 리턴하는 함수
+
+```js
+function callWith10(val, func) {
+  return func(10, val);
+}
+function add(a, b) {
+  return a + b;
+}
+function minus(a, b) {
+  return a - b;
+}
+function callWith(val1) {
+  return function(val2, func) {
+    return func(val1, val2);
+  };
+}
+
+var callWith10 = callWith(10);
+callWith10(20, add); // 30
+
+var callWith5 = callWith(5);
+callWith5(5, minus); // 0
+
+callWith(30)(20, add); // 50
 ```
