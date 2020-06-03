@@ -31,7 +31,7 @@ cross axis vertical
 align-self behaves exactly like align-itmes but only for one children
 only give to one children
 
-## align-times는 cross axis 방향에 있는 item을 바꾼다.
+## align-items는 cross axis 방향에 있는 item을 바꾼다.
 
 ```
 ex)
@@ -89,6 +89,8 @@ HTML doesn't change but you change the direciton of the items on the screen(CSS)
 # flex-wrap: wrap-reverse
 
 # line space when using flex-wrap: wrap
+
+# align-content
 
 To fix the line space of cross axis => _align-content_
 It modifies the lines of the corss axis
