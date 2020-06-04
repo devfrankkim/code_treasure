@@ -186,6 +186,7 @@ grid-column: 1 / -2
 
 # Grid-template && fr => fraction
 
+```
 fraction => space available from grid container
 
 we do % or fr for phone design
@@ -195,14 +196,18 @@ You need to set your grid HEIGHT
 1fr is 0 because height doesn't exist
 
 grid-template is the mother of all short cuts
+```
 
 **grid-area**
+
+```
 Don't forget to name your elements
 so that the grid-template can be applied
 ex) grid-area: header
 
 grid-template-columns: repeat(4, 100px);
 grid-template-rows: repeat(4, 100px);
+```
 
 **repeat doesn't work in grid-template**
 
@@ -221,6 +226,7 @@ ROW / COLUMN
 
 ```
 
+```
 divs have contents
 justify-items
 align-items
@@ -239,20 +245,24 @@ so justfiy-items works like justify-content(start, center, end) inside each cell
 align-items is working vertically
 
 REMBMER, by default, the items will be stretch
+```
 
 **If you don't have any contents inside the children, you don't see anything because there's no height and width**
 
+```
 By default, font-size will take the space but if there's no fonts, it wont' show up anything because the box doesn't have height and width because there's no font!!
 
 BUT when you set default size of width and height, it won't stretch because it has specific measurements (by DEFAULT)
+```
 
 ## EVERYTHING is stretched vertically and horizontally BY DEFAULT
 
 ## shortcuts => place-items => Y(vertical) X(horizontal)
 
+```
 place-items: vertical (y) horizontal (x)
 
-horizontally
+```
 
 # item means each one of the cells
 
@@ -264,19 +274,23 @@ horizontally
 
 ### place-content is just like place-items horizontal vertial
 
+```
 place-items is what happens in each one of the squares // inside the squares
 place-content is all the squares together // like flexbox
+```
 
 ### stretch
 
 ### align-self: end;
 
+```
 align-items, justify-items => applies to all the content
 
 align-self - justify-self
 justify-self: center; => removing the stretch
 
 place-self: align-self(vertical) justify-self(horizon)
+```
 
 ### Very important
 
@@ -302,9 +316,11 @@ grid-auto-rows: 400px; // setting for the leftover rows or don't even want repea
 
 ### grid-auto-flow
 
+```
 "grid-auto-flow: column" will have leftovers as columns instead of making rows
 BUT the thing is original content will be column as well.
 
 so it's either rows or columns like flex-direciton(flexbox)
 
 You can make a beautiful calendar because grid-auto-flow or grid-auto-rows or grid-auto-columns
+```
