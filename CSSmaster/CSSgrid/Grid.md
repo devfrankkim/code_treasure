@@ -1,4 +1,4 @@
-# Grid
+# Master GRID
 
 [grid template](https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid-template)
 [Great resource W3](https://www.w3.org/TR/css-align-3/#overview)
