@@ -445,4 +445,8 @@ grid-column:   5 / span 3
 
 ## QUESTION => grid-areas / grid-template / grid-template-areas / grid-area
 
-row-start / column-start / row-end / column-end
+grid-area => row-start / column-start / row-end / column-end
+
+### grid-template-columns: 50px repeat(3, 1fr) 50px
+
+### auto is working like fr
