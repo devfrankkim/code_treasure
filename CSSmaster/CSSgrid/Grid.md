@@ -1,5 +1,9 @@
 # Grid
 
+[Great resource W3](https://www.w3.org/TR/css-align-3/#overview)
+[css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-self)
+[Stackover flow](https://stackoverflow.com/questions/48535585/the-difference-between-justify-self-justify-items-and-justify-content-in-css-gr)
+
 **CSS grid alsp starts from the father like flexbox**
 
 display: grid;
@@ -324,3 +328,74 @@ so it's either rows or columns like flex-direciton(flexbox)
 
 You can make a beautiful calendar because grid-auto-flow or grid-auto-rows or grid-auto-columns
 ```
+
+# minmax
+
+**When you specify the minmax numbers, it can not go smaller than the minmax size.**
+
+as big as possible
+you don't want it to be small
+
+minmax(100px, 1fr)
+
+100px minimum and then it will stop shrinking
+the maximum size will be 1fr
+
+# auto-fit && auto-fill (only for repeat function) responsive design
+
+### auto-fill
+
+repeat(auto-fill, minmax(100px, 1fr));
+
+**fill the empty spaces in the row**
+
+instead of giving numbers.
+specify auto-fill as many columns as possible.
+so you will have many empty columns.
+
+fills the row with as many columns as possible even if the columns are empty
+
+### auto-fit
+
+**stretch to fit the row as much as possible&**
+
+repeat(auto-fit, minmax(100px, 1fr));
+What it does is, it fits the current elements so that they can fit the row
+
+it sort of works like 1fr.
+ex) if you add many boxes for auto-fit, it will stretch across the row to fit it
+
+### min-content && max-content (very useful) it only cares about the content inside the container
+
+The content size changes depending on the content(min or max) of the box.
+
+**sizes like fr**
+
+```
+when you make a box,
+
+min - tiny box
+max- max box
+
+grid-template-columns: max-content 100px;
+
+how small the content can be
+how big the content can be
+
+We are designing what we have inside the divs
+we are designging what the content should look like
+
+you can combine the minmax and repeat and max-content
+
+combination of 1fr max-content
+
+min-content is telling you to make it as small as possible based on the content
+max-content is telling you to make it as big as possible based on the content
+
+but you can also use it 1fr
+
+the box size will be 1fr
+```
+
+**grid-template-columns: repeat(auto-fit, minmax(20px, max-content))**
+**grid-template-columns: repeat(auto-fill, minmax(20px, max-content))**
