@@ -1,9 +1,11 @@
 # Grid
 
+[grid template](https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid-template)
 [Great resource W3](https://www.w3.org/TR/css-align-3/#overview)
 [css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-self)
 [Stackover flow](https://stackoverflow.com/questions/48535585/the-difference-between-justify-self-justify-items-and-justify-content-in-css-gr)
-
+[W3](https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid-template2)
+[`auto-fill` vs `auto-fit`](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)
 **CSS grid alsp starts from the father like flexbox**
 
 display: grid;
@@ -399,3 +401,48 @@ the box size will be 1fr
 
 **grid-template-columns: repeat(auto-fit, minmax(20px, max-content))**
 **grid-template-columns: repeat(auto-fill, minmax(20px, max-content))**
+
+### Grid-garden
+
+grid-column-start
+grid-column-end
+
+grid-column-end: -1;
+Keep in mind that span only works with positive values.
+
+### You should give start when using "span"
+
+"span" is count sell
+
+### You can also use the span keyword with grid-column-start to set your item's width relative to the end position.
+
+```
+Typing both grid-column-start and grid-column-end every time can get tiring. Fortunately, grid-column is a shorthand property that can accept both values at once, separated by a slash.
+
+For example, grid-column: 2 / 4; will set the grid item to start on the 2nd vertical grid line and end on the 4th grid line.
+
+grid-column: span 3 / 5
+grid-column:   5 / span 3
+```
+
+### grid-row-start works much like grid-column-start except along the vertical axis.
+
+### grid-row : grid-row-start / grid-row-end
+
+### gird-area: grid-row-start, grid-column-start, grid-row-end, followed by grid-column-end.
+
+### By default, all grid items have an order of 0, but this can be set to any positive or negative value, similar to z-index.
+
+### you can give % to your grid
+
+### grid-template-columns: 20% 20% 20% 20% 20%;. This can be simplified as grid-template-columns: repeat(5, 20%);
+
+### Grid also introduces a new unit, the fractional fr. Each fr unit allocates one share of the available space. For example, if two elements are set to 1fr and 3fr respectively, the space is divided into 4 equal shares; the first element occupies 1/4 and the second element 3/4 of any leftover space.
+
+### grid-template is a shorthand property that combines grid-template-rows and grid-template-columns.
+
+### For example, grid-template: 50% 50% / 200px; will create a grid with two rows that are 50% each, and one column that is 200 pixels wide.
+
+## QUESTION => grid-areas / grid-template / grid-template-areas / grid-area
+
+row-start / column-start / row-end / column-end
