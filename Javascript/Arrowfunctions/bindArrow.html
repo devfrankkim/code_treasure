@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a
+      href="https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/"
+    >
+      Source</a
+    >
+    <script>
+      // 42
+      let obj = {
+        id: 42,
+        counter: function counter() {
+          setTimeout(
+            function() {
+              console.log(this.id);
+            }.bind(this),
+            1000
+          );
+        }
+      };
+      console.log(obj.counter()); //
+
+      /*
+        In the ES5 example,
+        .bind(this) is required to help pass the this context into the function. 
+        Otherwise, by default this would be undefined.
+      */
+
+      // undefined
+      let obj1 = {
+        id: 42,
+        counter: function counter() {
+          setTimeout(function() {
+            console.log(this.id);
+          }, 1000);
+        }
+      };
+      console.log(obj1.counter()); // undefined
+
+      // ES6
+      let obj3 = {
+        id: 42,
+        counter: function counter() {
+          setTimeout(() => {
+            console.log(this.id);
+          }, 1000);
+        }
+      };
+
+      console.log(obj3.counter()); // 42
+
+      /*
+        ES6 arrow functions can’t be bound to a "this" keyword, 
+
+        so it will lexically go up A scope, 
+        and use the value of "this" in the scope WHERE it was defined.
+
+
+        The this of arrow functions is the nearest function scope,
+        meaning the scope of the function defined 
+        using the function keyword in which it occurs.
+      */
+
+      let cat = {
+        lives: 2,
+        normal: function() {
+          console.log(this.lives);
+        },
+        weird: function() {
+          let jump = function() {
+            console.log(this.lives);
+          };
+          return jump();
+        },
+        arrow: function() {
+          let jump = () => console.log(this.lives);
+          return jump();
+        }
+      };
+      cat.normal(); // 2
+      cat.weird(); // undefined
+      cat.arrow(); // 2
+
+      let lion = {
+        habit: {
+          cry: "wahhhhhahhhh",
+          lives: 100,
+          answer: function() {
+            console.log(this.cry);
+            let livesFun = () => console.log(this.lives);
+            return livesFun();
+          }
+        }
+      };
+
+      console.log(lion.habit.answer()); // wahhhhhahhhh, 100
+    </script>
+  </body>
+</html>
