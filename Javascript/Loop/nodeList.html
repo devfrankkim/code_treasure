@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a
+      href="https://dzone.com/articles/js-array-from-an-array-like-object"
+      target="_blank"
+      >Source</a
+    >
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    Some objects in JavaScript look like an array, but they aren’t one. <br />
+    That usually means that they have indexed access and a length property,
+    <br />
+    but none of the array methods. Examples include the special variable
+    arguments, DOM node lists, and strings.
+    <h2>So why would you want an array from an array-like?</h2>
+    <p>
+      To be able to iterate over it of course, oh and map(), filter(), or
+      reduce() too. <br /><br />
+      Also note that the NodeList object is iterable now using forEach(), even
+      though it’s not an Array. <br /><br />
+    </p>
+    <h4>The Classic Array.prototype.slice.call(Object)</h4>
+    <p>
+      Array.prototype.slice is the slice function for arrays, <br /><br />
+      and the call() and apply() methods let you manually set the value of this
+      in the function.
+    </p>
+    <h4>The Popular Array.from(Object)</h4>
+    <p>
+      The Array.from()method creates a new,
+      <strong>shallow-copied</strong> Array <br />
+      instance from an array-like or iterable object.
+    </p>
+    <h4>The Fancy [...arrLike]</h4>
+    <p>
+      it’s the spread syntax which helps to expand the arrLike object into its
+      elements, thus copying it
+    </p>
+    <script>
+      const arrLike = document.querySelectorAll("div");
+      console.log(arrLike); // NodeList(8) __proto__ : NodeList
+
+      let array1 = Array.prototype.slice.call(arrLike);
+      let array2 = Array.from(arrLike);
+      let array3 = [...arrLike];
+
+      console.log(array1); // (8) [div, div, div, div, div, div, div, div] __proto__: Array(0)
+      console.log(array2); // (8) [div, div, div, div, div, div, div, div] __proto__: Array(0)
+      console.log(array3); // (8) [div, div, div, div, div, div, div, div] __proto__: Array(0)
+    </script>
+  </body>
+</html>
