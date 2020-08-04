@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function thisFunctionFail() {
+        this.lives = 0;
+        this.addLives = function() {
+          this.oneUp = setTimeout(
+            //  BECAUSE 'this' here is just 'this' inside this function(){}
+            function() {
+              console.log(++this.lives);
+            },
+            1000
+          );
+        };
+      }
+
+      function solutionThisThat() {
+        this.lives = 0;
+        var that = this; // solution "that" = this
+        this.addLives = function() {
+          this.oneUp = setTimeout(function() {
+            console.log(++that.lives); // 'that'
+          }, 1000);
+        };
+      }
+
+      function solutionArrow1() {
+        this.lives = 0;
+        this.addLives = function() {
+          this.oneUp = setTimeout(() => {
+            console.log(++this.lives);
+          }, 1000);
+        };
+      }
+
+      function solutionArrow2() {
+        this.lives = 0;
+        this.addLives = () => {
+          this.oneUp = setTimeout(() => {
+            console.log(++this.lives);
+          }, 1000);
+        };
+      }
+
+      var mario = new solutionThisThat();
+      var mario = new solutionArrow1();
+      var mario = new solutionArrow2();
+
+      mario.addLives(); // startGame {lives: 1, oneUp: 1, addLives: ƒ}
+      mario.addLives(); // startGame {lives: 2, oneUp: 2, addLives: ƒ}
+      mario.addLives(); // startGame {lives: 3, oneUp: 3, addLives: ƒ}
+    </script>
+  </body>
+</html>
