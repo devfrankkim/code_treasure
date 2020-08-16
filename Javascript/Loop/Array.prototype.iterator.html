@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="letterResult"></ul>
+    <script>
+      var arr = ["a", "b", "c"];
+      var eArr = arr[Symbol.iterator]();
+      var letterResult = document.getElementById("letterResult");
+      // your browser must support for..of loop
+      // and let-scoped variables in for loops
+      // const and var could also be used
+      for (let letter of eArr) {
+        console.log(letter);
+        letterResult.innerHTML += "<li>" + letter + "</li>";
+      }
+      eArr.next(); // {value: "a", done: false}
+      eArr.next(); // {value: "b", done: false}
+      eArr.next(); // {value: "c", done: false}
+      eArr.next(); // {value: undefined, done: true}
+
+      function logIterable(it) {
+        var iterator = it[Symbol.iterator]();
+        // your browser must support for..of loop
+        // and let-scoped variables in for loops
+        // const and var could also be used
+        for (let letter of iterator) {
+          console.log(letter);
+        }
+      }
+
+      // Array
+      logIterable(["a", "b", "c"]);
+      // a
+      // b
+      // c
+
+      // string
+      logIterable("abc");
+      // a
+      // b
+      // c
+    </script>
+  </body>
+</html>
