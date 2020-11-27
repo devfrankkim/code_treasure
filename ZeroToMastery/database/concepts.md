@@ -1,5 +1,9 @@
 ## Database
 
+To practice:
+[Practice1](https://www.khanacademy.org/computing/computer-programming/sql)
+[Practice2](https://www.codecademy.com/learn/learn-sql)
+
 `brew install postgresql`
 
 `brew services start postgresql`
@@ -8,9 +12,9 @@
 
 ### To create DB
 
-Now in order for us to use Postgres we need to create a database.      
+- Now in order for us to use Postgres we need to create a database.      
 
-And the way we do that is to use the `createdb [test]`  command that has come once we've installed Postgres.
+- And the way we do that is to use the `createdb [test]`  command that has come once we've installed Postgres.
 
 ### To connect DB
 
