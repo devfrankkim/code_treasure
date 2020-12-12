@@ -24,7 +24,7 @@ a();
 
 
 
-// : local memory that is lexically sitting inside for the parent
+// : local memory that is lexically sitting inside of the parent
 // : local memory along with lexical environment of the parent
 
 
@@ -66,3 +66,4 @@ a();
 
 */
 // ====== lexical environment: memory + reference to lexical environment of the parents(SCOPE CHAIN) ======
+
