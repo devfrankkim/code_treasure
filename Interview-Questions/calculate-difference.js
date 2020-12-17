@@ -16,3 +16,13 @@ let difference = (function (arr){
 })(numbers);
 
 console.log(difference);
+
+
+let usingReduce = (function (arr) {
+    console.log(arr);
+    let highest = arr.reduce( (a,b) => a > b ? a : b  )
+    let lowest = arr.reduce( (a,b) => a < b ? a : b  )
+    return highest - lowest
+})(numbers)
+
+console.log(usingReduce);
