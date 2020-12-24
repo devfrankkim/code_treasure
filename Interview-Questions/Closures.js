@@ -48,4 +48,37 @@ function z(){
     x();
 }
 
-z();
+z(); 
+
+
+// Use closures to store private data
+
+/*
+Due to the fact that the data from outer scope is preserved, 
+creating iterators with closures is fairly easy. 
+The buildContor() function from above it’s actually an iterator. 
+Every call creates a new iterator with a fixed start index. 
+Then, at every successive invocation of the iterator, the next value is returned.
+*/
+
+
+function buildContor(i) { 
+    var contor = i;
+    var displayContor = function() {
+        console.log(contor++);        
+    };
+    return displayContor; 
+}
+
+var myContor = buildContor(1);
+myContor(); // 1
+myContor(); // 2
+myContor(); // 3
+
+// new closure - new outer scope - new contor variable
+var myOtherContor = buildContor(10);
+myOtherContor(); // 10 
+myOtherContor(); // 11
+
+// myContor was not affected 
+myContor(); // 4
