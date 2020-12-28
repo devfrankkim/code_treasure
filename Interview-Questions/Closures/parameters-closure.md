@@ -1,8 +1,8 @@
 ## Paramters - Closure
 
-Are function parameters closed over?
+- Are function parameters closed over?
+- This works the same way
 
-This works the same way
 ```js
 function outer(b){
     function inner(){
@@ -13,10 +13,10 @@ function outer(b){
     return inner; 
 }
 
-outer()(); // 1000
+outer()(); 
 
 let close = outer("Hello Frank")
-close(); // 1000
+close(); 
 ```
 
 `Before`
