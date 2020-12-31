@@ -5,7 +5,7 @@ function outerParents(){
     let parents = "parents";
     function outer(b){
         function inner(){
-            console.log(a); // 10
+            console.log(a); // 1000
             console.log(b); // "Hello Frank"
             console.log(parents); // parents
         }
