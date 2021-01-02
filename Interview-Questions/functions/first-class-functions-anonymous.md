@@ -1,5 +1,6 @@
 ## FIRST CLASS FUNCTIONS & Anonymous Functions
 ### Note that functions are the first-class citizens in JavaScript, so you can pass a function to another as an argument.
+[Check the source for first-class citizens in JavaScript](https://www.javascripttutorial.net/javascript-functions-are-first-class-citizens/)
 
 - Passing a function to another function
 - In other words, you can treat functions like values of other types.
