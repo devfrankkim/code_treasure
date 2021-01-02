@@ -1,6 +1,47 @@
 ## FIRST CLASS FUNCTIONS & Anonymous Functions
 ### Note that functions are the first-class citizens in JavaScript, so you can pass a function to another as an argument.
 
+- Passing a function to another function
+- In other words, you can treat functions like values of other types.
+- Storing functions in variables
+
+  
+```js
+// ======= Storing functions in variables =======
+function add(a, b) {
+    return a + b;
+}
+
+let sum = add;
+
+
+//  ======= The following declares the average() function that takes three arguments. The third argument is a function: =======
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
+
+// ======= Now, you can pass the sum function to the average() function as follows: =======
+let result = average(10, 20, sum);
+```
+```js
+// Put it all together:
+
+function add(a, b) {
+    return a + b;
+}
+
+let sum = add;
+
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
+
+let result = average(10, 20, sum);
+
+console.log(result); // 15
+```
+
+
 - ***Function Statement vs Function Expression vs Function Declaration***
 
 ***Function Statement aka Function Declaration***
