@@ -18,7 +18,9 @@ console.log(counter1); // counter {incrementCounter: ƒ, decrementCounter: ƒ}
 counter1.incrementCounter(); // 1
 counter1.incrementCounter(); // 2
 counter1.incrementCounter(); // 3
-counter1.decrementCounter(); // 2
+counter1.incrementCounter(); // 4
+counter1.incrementCounter(); // 5
+counter1.decrementCounter(); // 4
 
 let counter2 = new Counter();
 counter2.incrementCounter(); // 1 
