@@ -11,7 +11,7 @@ function outerParents(){
         }
         let a = 1000;
         return inner; 
-    }
+    } 
     return outer
 }
 
