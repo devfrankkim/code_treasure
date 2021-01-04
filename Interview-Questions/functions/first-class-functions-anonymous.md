@@ -132,6 +132,65 @@ let show = () => console.log('Anonymous function');
 
 ***Named function Expression***
 
+- Names are useful. Names can be seen in stack traces, call stacks, lists of breakpoints, etc. Names are a Good Thing.
+
+- Naming functions is useful if they need to reference themselves (e.g. for recursive calls)
+
+- Anonymous functions doesn't help when debugging as you can't see the name of the function that causes problems.
+
+- When you do not name a function, later on its harder to understand what it's doing. Giving it a name makes it easier to understand.
+
+```js
+setTimeout(function sayMoo() {
+    alert('MOO');
+    setTimeout(sayMoo, 5000);
+}, 1000);
+/*
+It would be impossible to write this code quite this cleanly if the function expression passed to setTimeout were anonymous; we would need to assign it to a variable instead prior to the setTimeout call. This way, with a named function expression, is slightly shorter and neater.
+*/
+```
+
+- One key thing about a named function expression is that it creates an in-scope identifier with that name for the function within the functon body:
+```js
+let x = function example() {
+    console.log(typeof example); // "function"
+};
+x();
+console.log(typeof example);     // "undefined"
+```
+
+- With named function expressions, the name of the function expression is enclosed within its own scope. It doesn't get declared in the outer scope.
+
+```js
+function a(){
+    console.log('a called')
+}
+
+let namedExpression = function nameExpress(){
+  console.log("It expresses like a value with NAME")
+}
+
+a();
+namedExpression();
+nameExpress(); // Uncaught ReferenceError: nameExpress is not defined
+
+/*
+"nameExpress" is not created in the outer scope(global scope)
+it is created as a local variable
+- you can access the function inside the function
+*/
+
+let b = function nameExpress(){
+  console.log(nameExpress, 'calling the function inside')
+}
+b();
+/*
+    ƒ nameExpress(){
+        console.log(nameExpress, 'calling the function inside')
+    } "calling the function inside"
+*/
+nameExpress(); // Uncaught ReferenceError: nameExpress is not defined
+``
 
 
 
