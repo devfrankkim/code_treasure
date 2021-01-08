@@ -214,14 +214,14 @@ let products = [
 ];
 
 console.log('Products sorted by name:');
-products.sort(compareBy('name'));
+products.sort(compareBy('price'));
 
 console.table(products);
 
 	
  index  |       name       |  price
-    0	  "Samsung Galaxy"	850
-    1	  "Sony Xperia"	    700
+    0	  "Sony Xperia"	    700
+    1	  "Samsung Galaxy"	850
     2	  "iPhone"	        900
 ```
 
