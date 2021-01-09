@@ -7,6 +7,7 @@
   ```js
   // the first parameter for setTimeout is a callback function after certain amount of time.
   // after second parameter
+  // giving the callback to setTimeout and it executes sometime later 
   setTimeout(function(){
     console.log('this is from call back')
   }, 3000)
@@ -16,8 +17,8 @@
   // y is called back sometime later in your code
 
     function x(y){
-      y();
       console.log('x');
+      y();
     }
 
     x(function y(){          
