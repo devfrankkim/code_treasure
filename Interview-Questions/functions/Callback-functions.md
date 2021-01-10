@@ -39,6 +39,16 @@
 
 
 ## Blocking the main thread
+- JavaScript has just one call stack -> Main Thread
+- Everythng will be executed through the call stack(Main Thread)
+- IF any operation blocks the call stack, it's blocking the Main Thread
+- We should NEVER block our Main Thread -> there's just One Stack 
+- setTimeout will basically take the call back, and it executes the code sometime later
+
+
+- IF JavaScript didn't have the FIRST CLASS FUNCTIONS(passing functions to other functions) & call back functions, we can't do async operation.
+- Using the Web API(setTimeout) and the call back functions, we can do async operations.
+
 
 ## Deep about Event Listners
 
