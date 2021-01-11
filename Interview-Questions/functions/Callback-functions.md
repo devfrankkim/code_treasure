@@ -1,3 +1,7 @@
+[Inline events vs Event Listeners](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick)
+- Do you need to attach more than one event to an element?
+- Will you in the future?
+- With inline events, the events can be overwritten.
 ## What is a Callback function in JavaScript? Why do we use it?
 
 - functions are first cizen
@@ -57,18 +61,52 @@
 2. When the EVENT happens,
 3. The callback will automatically comes into the call stack(Main Thread)
 4. It will be executed
-  
-
-
+   
 
 ```js
    document.getElementById("clickMe").addEventListener("click", function(){
      console.log('button clicked');
    })
 
-
 ```
 ## Closures Demo with Event Listeners
+
+- Using a global variable is not a good solution
+```js
+   let count = 0;
+   document.getElementById("clickMe").addEventListener("click", function(){
+     console.log('button clicked', ++count);
+   })
+ //clicked
+ // 1
+ // 2
+ // 3 
+```
+
+
+```js
+   function closureEventListners(){
+      let count = 0;
+
+            // this callback will form a closure with its outer scope  ("count")
+            // ("closureXYZ") has the access to the Closure
+            // the callback function is also called "(handler)" in Event Listeners becaues it's handling things when the event happens
+            // The "handler" has scopes -> the same lexcial scope 
+            // what will be inside the scopes?
+             // -> CLOSURE: outer lexical scope(parent) + global scope(global environment) 
+            // Clousre -> whenever the callback function is executed, it has the scopes attached to itself. It remembers everything.
+
+      document.getElementById("clickMe").addEventListener("click", function closureXYZ (){
+        console.log('button clicked', ++count);
+      })
+   }
+
+   closureEventListners();
+
+
+
+```
+
 
 ## Scope Demo with Event Listeners
 
