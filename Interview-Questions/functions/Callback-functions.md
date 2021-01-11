@@ -52,6 +52,22 @@
 
 ## Deep about Event Listners
 
+**When the event happens, it will call the callback function**
+1. The callback function will be stored somewhere first 
+2. When the EVENT happens,
+3. The callback will automatically comes into the call stack(Main Thread)
+4. It will be executed
+  
+
+
+
+```js
+   document.getElementById("clickMe").addEventListener("click", function(){
+     console.log('button clicked');
+   })
+
+
+```
 ## Closures Demo with Event Listeners
 
 ## Scope Demo with Event Listeners
