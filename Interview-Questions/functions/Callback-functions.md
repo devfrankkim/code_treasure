@@ -102,12 +102,9 @@
    }
 
    closureEventListners();
-
-
-
 ```
 
-
-## Scope Demo with Event Listeners
-
 ## Garbage Collection & removeEventListeners
+
+- Event Listeners is heavy (memory)
+- Even when Call Stack is empty, even if codes aren't being executed, it still forms closures -> wasting space -> remove it
