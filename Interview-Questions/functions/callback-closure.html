@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback with closures</title>
+</head>
+<body>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+           function closureEventListners(){
+            let count = 0;
+
+            // this callback will form a closure with its outer scope  ("count")
+            // ("closureXYZ") has the access to the Closure
+            // the callback function is also called "(handler)" in Event Listeners becaues it's handling things when the event happens
+            // The "handler" has scopes -> the same lexcial scope 
+            // what will be inside the scopes?
+             // -> CLOSURE: outer lexical scope(parent) + global scope(global environment) 
+            // Clousre -> whenever the callback function is executed, it has the scopes attached to itself. It remembers everything.
+
+
+            document.getElementById("clickMe").addEventListener("click", function closureXYZ (){
+                console.log('button clicked', ++count);
+            })
+        }
+
+   closureEventListners();
+    </script>
+</body>
+</html>
