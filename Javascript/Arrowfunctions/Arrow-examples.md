@@ -120,14 +120,10 @@ let lion = {
 console.log(lion.habit.answer()); // wahhhhhahhhh, 100
 ```
 
-####
+#### Summary
 
-With arrow functions the this keyword
-Always represents the OBJECT THAT DEFINED the arrow function.
+**With arrow functions the "this" keyword**
+**Always represents the OBJECT THAT DEFINED the arrow function.(Parent's scope)**
 
-The result shows that the first example returns two different objects
-(window and button),
-
-and the second example returns the window object twice,
-
-because the window object is the "owner" of the function.
+**normal function => Who's calling?**
+**arrow function => Parent's scope(it will lexically go up a scope, and use the value of this)**
