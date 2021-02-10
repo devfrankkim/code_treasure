@@ -39,3 +39,5 @@ console.log(cities); // Set(7) {"Tahoe City", "Nevada City", "Redwood Valley", 
 
 let arrayFrom = Array.from(cities); // (7) ["Tahoe City", "Nevada City", "Redwood Valley", "Willits", "Garberville", "Shelter Cove", "Mendocino"]
 ```
+
+
