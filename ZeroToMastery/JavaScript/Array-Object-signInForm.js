@@ -60,3 +60,22 @@ function signIn(userName, userPW) {
 }
 
 signIn(userName, userPW);
+
+let amazonBasket = {
+  glasses: 1,
+  books: 2,
+  floss: 100,
+};
+
+function checkBasket(basket, lookingFor) {
+  for (item in basket) {
+    if (item === lookingFor) {
+      console.log(
+        `${lookingFor} is in your basket. How many ${basket[lookingFor]}`
+      );
+    }
+  }
+  return "that does not exist in your basket";
+}
+
+checkBasket(amazonBasket, "books");
