@@ -1,6 +1,6 @@
 // Solve the below problems:
 
-// #1) Convert the below promise into async await
+// #1) Convert the below promise into asy nc await
 fetch("https://jsonplaceholder.typicode.com/users/")
   .then((response) => response.json())
   .then(console.log);
