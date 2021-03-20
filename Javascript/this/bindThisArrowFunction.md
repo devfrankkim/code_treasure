@@ -187,7 +187,9 @@ the way "this" works so you have to be careful.
 
 If you run into any bugs where you are trying to binding an object with a function and you are getting undefined and the issue may be that it's referencing the wrong scopes of "this"
 
-So when you use an arrow function, "this" is actually referencing the only scope of the single function. Not is bound to it.
+So when you use an arrow function,
+"this" is actually referencing the only scope of the single function.
+Not is bound to it.
 ```
 
 ```js
@@ -199,3 +201,8 @@ const fullName = () => {
   return `${this.lastName}, ${this.firstName}`;
 };
 ```
+
+# Arrow function
+
+it's not just shorter function.
+it's changing the scope of "this"
