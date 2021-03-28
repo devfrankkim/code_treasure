@@ -28,3 +28,20 @@ _We have reason to believe typeof null === “object” is a bug that could bite
 In the initial version of JavaScript, values were storied in 32 bit units. The first 3 bits represented the data type tag followed by the remaining bits that represented the value.
 
 For all objects it was 000 as the type tag bits. null was considered to be a special value in JavaScript from its very first version. null was a representation of the null pointer. However, there were no pointers in JavaScript like C. So null simply meant nothing or void and was represented by all 0’s. Hence all its 32 bits were 0’s. So whenever the JavaScrit interpreter read null, it considered the first 3 bits as type “object”. That is why typeof null returns “object”.
+
+```
+JavaScript objects, variables, properties, and methods can be "undefined".
+
+In addition, empty JavaScript objects can have the value null.
+
+This can make it a little bit difficult to test if an object is empty.
+
+You can test if an object exists by testing if the type is undefined:
+
+But you cannot test if an object is null,
+because this will throw an error if the object is undefined:
+
+ERROR:: if (myObj !== null && typeof myObj !== "undefined")
+SOLUTION => if (typeof myObj !== "undefined" && myObj !== null)
+
+```
