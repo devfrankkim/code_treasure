@@ -1,4 +1,4 @@
-# Built-in JavaScript
+# Built-in JavaScript => ƒ Date() { [native code] }
 
 ```js
 Math.PI; // 3.141592653589793
