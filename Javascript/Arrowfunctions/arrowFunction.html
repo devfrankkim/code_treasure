@@ -31,11 +31,11 @@
     }
     
     //The window object calls the function:
-    window.addEventListener("load", hello);
+    window.addEventListener("load", hello); // [object Window]
 
     //A button object calls the function:
     // so who owns the arrow function?
-    document.getElementById("btn").addEventListener("click", hello);
+    document.getElementById("btn").addEventListener("click", hello); // [object Window]
     </script>
   </body>
 </html>
