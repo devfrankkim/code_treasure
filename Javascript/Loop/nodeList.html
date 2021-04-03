@@ -49,7 +49,16 @@
       it’s the spread syntax which helps to expand the arrLike object into its
       elements, thus copying it
     </p>
+
     <script>
+      var letterResult = document.getElementById("letterResult");
+      // your browser must support for..of loop
+      // and let-scoped variables in for loops
+      // const and var could also be used
+      for (let letter of eArr) {
+        letterResult.innerHTML += "<li>" + letter + "</li>";
+      }
+
       const arrLike = document.querySelectorAll("div");
       console.log(arrLike); // NodeList(8) __proto__ : NodeList
 
