@@ -138,3 +138,40 @@ bound(1, 1, 1); // 5
 bind gives me a function
 object + function
 bind gives you a function back.
+
+basically bind allows you to force a particular value of "this"
+and it will return a new function that you can then call
+
+```js
+console.log(this);
+let arrow = () => this;
+console.log(arrow); // () => this;
+console.log(arrow()); // Window;
+```
+
+```js
+// need to assign it to another variable because it's returning a new function
+let arrow = () => this;
+var newFun = arrow.bind("hello");
+console.log(newFun()); // window
+```
+
+```js
+function normal() {
+  console.log(this);
+}
+var newFun = normal.bind("normal"); // normal.bind("normal")();
+console.log(newFun()); // String{"normal"}
+```
+
+```
+The whole point of the arrow function is
+to get the value of "this" from the parent context
+
+That's the point.
+You can't change the value of "this" for arrow functions even if the bind function gets called on it.
+It doesn't change the value of "this"
+
+so if you need to explicitly state what the value of this should be
+you need to use a normal function and then you use the bind method.
+```
