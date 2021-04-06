@@ -2,8 +2,8 @@
 
 [Class in Code Academy](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-classes/cheatsheet)
 
-
 **Class**
+
 ```
 JavaScript supports the concept of classes as a syntax for creating objects. Classes specify the shared properties and methods that objects produced from the class will have.
 
@@ -11,15 +11,16 @@ When an object is created based on the class, the new object is referred to as a
 
 The code sample shows a class that represents a Song. A new object called mySong is created underneath and the .play() method on the class is called. The result would be the text Song playing! printed in the console.
 ```
+
 ```js
 class Song {
   constructor() {
     this.title;
     this.author;
   }
-  
+
   play() {
-    console.log('Song playing!');
+    console.log("Song playing!");
   }
 }
 
@@ -32,6 +33,7 @@ mySong.play();
 ```
 Classes can have a constructor method. This is a special method that is called when the object is created (instantiated). Constructor methods are usually used to set initial values for the object.
 ```
+
 ```js
 class Song {
   constructor(title, artist) {
@@ -40,7 +42,7 @@ class Song {
   }
 }
 
-const mySong = new Song('Bohemian Rhapsody', 'Queen');
+const mySong = new Song("Bohemian Rhapsody", "Queen");
 console.log(mySong.title);
 ```
 
@@ -51,20 +53,21 @@ Class Methods
 Properties in objects are separated using commas. This is not the case when using the class syntax. Methods in classes do not have any separators between them.
 
 ```
-```js
 
+```js
 class Song {
   play() {
-    console.log('Playing!');
+    console.log("Playing!");
   }
-  
+
   stop() {
-    console.log('Stopping!');
+    console.log("Stopping!");
   }
 }
 ```
 
 ### extends
+
 ```
 JavaScript classes support the concept of inheritance — a child class can extend a parent class. This is accomplished by using the extends keyword as part of the class definition.
 
@@ -72,7 +75,6 @@ Child classes have access to all of the instance properties and methods of the p
 ```
 
 ```js
-
 // Parent class
 class Media {
   constructor(info) {
@@ -89,15 +91,15 @@ class Song extends Media {
   }
 }
 
-const mySong = new Song({ 
-  artist: 'Queen', 
-  name: 'Bohemian Rhapsody', 
+const mySong = new Song({
+  artist: "Queen",
+  name: "Bohemian Rhapsody",
   publishDate: 1975
 });
 ```
 
-
 ### Static Methods
+
 ```
 Within a JavaScript class, the static keyword defines a static method for a class. Static methods are not called on individual instances of the class, but are called on the class itself. Therefore, they tend to be general (utility) methods.
 ```
@@ -105,20 +107,20 @@ Within a JavaScript class, the static keyword defines a static method for a clas
 ```js
 class Dog {
   constructor(name) {
-    this._name = name;  
+    this._name = name;
   }
-  
-  introduce() { 
-    console.log('This is ' + this._name + ' !');  
+
+  introduce() {
+    console.log("This is " + this._name + " !");
   }
-  
+
   // A static method
   static bark() {
-    console.log('Woof!');  
+    console.log("Woof!");
   }
 }
 
-const myDog = new Dog('Buster');
+const myDog = new Dog("Buster");
 myDog.introduce();
 
 // Calling the static method
