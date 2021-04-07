@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS grid</title>
+    <style>
+      .calculator {
+        display: grid;
+        /* Method 1*/
+        /* grid-template-columns: 50px 50px 50px 50px; */
+
+        /* Method 2*/
+        /* grid-template-columns: 10vw 25% 50px 2rem; */
+
+        /* Method 3 */
+        grid-template-columns: 50% 100px 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>0</button>
+      <button>.</button>
+
+      <button>/</button>
+      <button>*</button>
+      <button>+</button>
+      <button>-</button>
+      <button>=</button>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    
+    grid makes block. greedy
+    
+    or
+    
+    it should be grid: inline-grid 
+
+-->
