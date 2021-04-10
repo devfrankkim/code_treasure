@@ -26,6 +26,7 @@
 [ES6 Syntax, Good examples](https://blog.logrocket.com/javascript-es6-5-new-abstractions-to-improve-your-code-54a369e82407/)
 
 [Korean blog good examples](https://webclub.tistory.com/638)
+[Prototype](https://chamikakasun.medium.com/javascript-prototype-and-prototype-chain-explained-fdc2ec17dd04)
 
 # ETC
 
