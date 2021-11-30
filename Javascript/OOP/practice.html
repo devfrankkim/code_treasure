@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>I can do it!</h3>
+    <ul>
+      <li>123213</li>
+      <li>123</li>
+      <li>1232132</li>
+    </ul>
+    <script>
+      var superObject = { superValue: "super" };
+      var subObject = Object.create(superObject);
+      subObject.subvalue = "sub"; // 'sub'
+      // debugger; // 객체의 상태를 자세히 볼 수 있다.
+    </script>
+  </body>
+</html>
