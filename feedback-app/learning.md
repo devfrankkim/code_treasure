@@ -99,18 +99,57 @@ export default Card
 
 ### conditional styling
 
-```
-function Card({children, reverse}){
+```js
+function Card({ children, reverse }) {
   return (
     <div
-      className='card'
-      style={
-        {backgroundColor: reverse ? 'rgba(0,0,0,0.4)' : '#fff',
-         color: reverse ? '#fff' : '#000'}
-        }>
+      className="card"
+      style={{
+        backgroundColor: reverse ? "rgba(0,0,0,0.4)" : "#fff",
+        color: reverse ? "#fff" : "#000",
+      }}
+    >
       {children}
-    </div>)
+    </div>
+  );
 }
 
-export default Card
+export default Card;
+```
+
+```js
+{reverse ? (
+   <div className="card reverse">{children}</div>
+ ) : (
+   <div className="card">{children}</div>
+ )}
+
+// conditional class
+<div className={`card ${reverse && "reverse"}`}>{children}</div> */
+
+// style
+
+ <div
+className="card"
+style={{
+  backgroundColor: reverse ? "rgba(0,0,0,0.4)" : "#fff",
+  color: reverse ? "#fff" : "#000",
+}}
+>
+```
+
+### PropTypes.arrayOf (PropTypes.shape({ }))
+
+- arrayof: shape of array or what should be included in the object in the array
+
+```js
+FeedbackList.propTypes = {
+  feedback: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+    })
+  ),
+};
 ```
