@@ -118,6 +118,7 @@ export default Card;
 ```
 
 ```js
+// javaScript
 {reverse ? (
    <div className="card reverse">{children}</div>
  ) : (
@@ -128,7 +129,6 @@ export default Card;
 <div className={`card ${reverse && "reverse"}`}>{children}</div> */
 
 // style
-
  <div
 className="card"
 style={{
@@ -153,3 +153,67 @@ FeedbackList.propTypes = {
   ),
 };
 ```
+
+## JavaSCript takeaway grammer
+
+- reduce(prev, next) > adding all together from Array
+  ```js
+  let average =
+    feedback.reduce((prev, next) => {
+      return prev + next.rating;
+    }, 0) / feedback.length;
+  ```
+- toFixed() > formats a number using fixed-point notation.
+
+```js
+console.log((4.5555).toFixed(1)); // '4.6'
+```
+
+- Number() > converts a string or other value to the Number type
+
+```js
+Number((4.5555).toFixed(1)); // 4.6
+```
+
+- Regular expression > only 1 decimal if any && no decimal if nothing.
+
+```js
+(9.0).toFixed(1).replace(/[.,]0$/, ""); // 9
+(9.1).toFixed(1).replace(/[.,]0$/, ""); // 9.1
+```
+
+- isNaN > determines whether a value is NaN or not
+- isNaN('37'); // false: "37" is converted to the number 37 which is not NaN
+
+```js
+<h4>Average Rating: {isNaN(average) ? 0 : average}</h4>
+```
+
+**use Number.NaN()**
+
+- src: https://medium.com/dailyjs/better-nan-check-with-es6-number-isnan-517861d32be3
+
+```js
+// What?? 😱
+isNaN("string"); // true
+// Better ✅
+Number.isNaN("string"); // false
+```
+
+- It would be much more accurate to think of NaN as being “invalid number”, “failed number,” or even “bad number,” than to think of it as “not a number.”
+- You get NaN when you try to do some mathematical operations on values that are not Numbers.
+- NaN is a very special value that never equals to itself.
+
+```js
+const value = NaN;
+value === NaN; // false
+value == NaN; // false
+```
+
+- It solves the isNaN false positive problem. Number.isNaN doesn't do any coercion. In other words, it doesn't try to convert the argument's type to a Number type.
+
+**isNaN()**
+
+- String 일때, isNaN('hi') > Number('hi') > NaN > > true
+- Remember the intention of the NaN-check, the method is asking: "Does the value equal to NaN? It is NOT asking if the value is equal to "not a number".
+- src: https://www.youtube.com/watch?v=7fINXRQoqZI
