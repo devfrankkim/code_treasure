@@ -1,0 +1,1 @@
+20220217	12:32:30	4c5cf6bf-ab59-405b-a585-edb3e224ee9b	Log event emitted!	second parameter
