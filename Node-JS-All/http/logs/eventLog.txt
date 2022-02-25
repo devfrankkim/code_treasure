@@ -1,0 +1,6 @@
+20220217	12:59:14	60a8ae0a-56e0-40fe-b18a-5da05996c5eb	Log event emitted!	second parameter
+20220217	13:01:07	f0e91ab6-2d28-48f8-909d-fcb208a1a2b9	Log event emitted!	second parameter
+20220217	13:01:42	7d8a25ef-f477-4279-804b-0fec19d0a7b7	Log event emitted!	second parameter
+20220217	13:01:45	16a9cf5e-388f-47ac-ad23-d66a0c4bd340	Log event emitted!	second parameter
+20220217	13:02:58	3a5c699e-9959-45ed-a1aa-655e1a94df22	Log event emitted!	second parameter
+20220217	13:03:07	b1b10574-40ca-40a0-b3e3-20405b31550d	Log event emitted!	second parameter
