@@ -19,6 +19,8 @@ const ToDoList = () => {
     watch,
     formState: { errors },
     setError,
+    setValue,
+    reset,
   } = useForm <
   IForm >
   {
@@ -28,7 +30,7 @@ const ToDoList = () => {
       lastName: "Kim",
     },
   };
-  //   const onValid: SubmitHandler<IForm> = (data) => {
+  // const onValid: SubmitHandler<IForm> = (data) => {
   const onValid = (data: IForm) => {
     if (data.password !== data.password1)
       setError(
@@ -38,6 +40,8 @@ const ToDoList = () => {
         },
         { shouldFocus: true }
       );
+    setValue("email", "");
+    reset();
   };
   console.log(errors);
 
