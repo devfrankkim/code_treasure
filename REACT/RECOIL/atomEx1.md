@@ -1,4 +1,4 @@
-## atom example
+## atom + selector + get + enum example
 
 ```js
 import { atom, selector } from "recoil";
