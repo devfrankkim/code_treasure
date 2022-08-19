@@ -96,3 +96,7 @@ const Card = styled.div`
   background-color: ${(props) => props.theme.cardColor};
 `;
 ```
+
+```js
+float = 0.1;
+```
